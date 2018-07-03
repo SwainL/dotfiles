@@ -1,4 +1,4 @@
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let vundle mange vundle
@@ -11,18 +11,21 @@ Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode 
 Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'fatih/molokai'
 Plugin 'chriskempson/base16-vim'
 Plugin 'liuchengxu/space-vim-dark'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Lokaltog/vim-powerline'
 call vundle#end()
 
 set encoding=utf8
 " color
-colorscheme molokai
+" let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 syntax enable
 set t_Co=256
-set background=dark
-let g:molokai_original = 1
 let g:rehash256 = 1
 " enable syntax highlighting
 filetype plugin indent on
@@ -40,7 +43,6 @@ set wildmenu
 set wildmode=full
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 set laststatus=2
-set t_Co=256
 " set tabs to have 4 spaces
 set ts=4
 " indent when moving to the next line while writing code
@@ -56,5 +58,3 @@ set showmatch
 " enable all Python syntax highlighting features
 let python_highlight_all=1
 map <C-n> :NERDTreeToggle<CR>
-
-
