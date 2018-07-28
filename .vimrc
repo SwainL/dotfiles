@@ -11,14 +11,15 @@ Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode 
 Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" Plugin 'Valloric/YouCompleteMe'
 Plugin 'fatih/molokai'
 Plugin 'chriskempson/base16-vim'
 Plugin 'liuchengxu/space-vim-dark'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 
+set nocompatible
 set encoding=utf8
 " color
 " let g:solarized_termcolors=256
@@ -58,3 +59,5 @@ set showmatch
 " enable all Python syntax highlighting features
 let python_highlight_all=1
 map <C-n> :NERDTreeToggle<CR>
+" Python IDE
+let g:jedi#force_py_version="2.7"
